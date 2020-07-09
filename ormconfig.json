@@ -1,6 +1,13 @@
 {
-  "type": "sqlite",
-  "database": "./db.sqlite3",
-  "entities": ["./src/models/*.ts"],
-  "synchronize": true
+  "type": "mysql",
+  "host": "127.0.0.1",
+  "port": 3306,
+  "username": "root",
+  "password": "password",
+  "database": "UBuyDB",
+  "synchronize": true,
+  "logging": false,
+  "entities": ["src/models/*.ts"],
+  "migrations": ["src/migration/**/*.ts"],
+  "subscribers": ["src/subscriber/**/*.ts"]
 }
